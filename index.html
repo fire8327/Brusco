@@ -9,7 +9,7 @@
     <title>Главная</title>
 </head>
 <body class="flex flex-col min-h-screen bg-[#0C0C0C] text-[#E8E8E8]">
-    <header class="w-full min-h-screen max-lg:bg-cover link bg-no-repeat bg-right-top bg-[url(Assets/Images/header/bg.png)]">
+    <header class="w-full min-h-screen max-lg:bg-cover link bg-no-repeat bg-right-top bg-[url(Assets/Images/header/bg.png)] flex flex-col">
         <nav class="container mx-auto flex max-lg:justify-center justify-between items-center py-4 lg:py-6 text-lg lg:gap-32 px-4">
             <a href="" class="max-lg:z-10">
                 <img src="Assets/Images/header/logo.svg" alt="">
@@ -32,12 +32,12 @@
             </button>
             <div class="absolute inset-0 bg-black opacity-60 z-40 top-0 h-screen hidden lg:hidden" id="overlay"></div>
         </nav>
-        <div class="flex flex-col gap-12 md:gap-16 lg:gap-[76px] mt-10 md:mt-16 lg:mt-28 container mx-auto uppercase px-4">
-            <div class="flex flex-col text-lg lg:max-w-[50%] xl:max-w-[637px] gap-2 max-lg:z-10">
+        <div class="flex flex-col gap-12 md:gap-16 lg:gap-[76px] lg:mt-28 container mx-auto uppercase px-4 max-lg:justify-center max-lg:grow">
+            <div class="flex flex-col lg:text-lg lg:max-w-[50%] xl:max-w-[637px] gap-2 max-lg:z-10">
                 <p>В хорошей <span class="text-[#696969] font-bold">СЫРОВАРНЕ</span> варят вкуснейший сыр, который пробуждает глубокие гастрономические эмоции.</p>
                 <p>В хорошей <span class="text-[#696969] font-bold">ПИВОВАРНЕ</span> варят вкуснейшие напитки, утоляющие жажду и поднимающие настроение.</p>
             </div>
-            <p class="text-4xl lg:max-w-[50%] xl:max-w-[651px] max-lg:z-10">В <span class="text-[#2F4F4F] font-bold">ШАРОВАРНЕ БРУСКО</span> мы с любовью варим для вас ландшафтные шары, которые станут ярким и центральным местом вашего сада. Они будут пробуждать бурю эмоций и впечатлений круглый год.</p>
+            <p class="text-2xl md:text-3xl lg:text-4xl lg:max-w-[50%] xl:max-w-[651px] max-lg:z-10">В <span class="text-[#2F4F4F] font-bold">ШАРОВАРНЕ БРУСКО</span> мы с любовью варим для вас ландшафтные шары, которые станут ярким и центральным местом вашего сада. Они будут пробуждать бурю эмоций и впечатлений круглый год.</p>
         </div>
         <div class="absolute inset-0 bg-black opacity-70 h-full lg:hidden"></div>
     </header>  
