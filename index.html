@@ -4,48 +4,284 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="Assets/CSS/custom.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Главная</title>
 </head>
 <body class="flex flex-col min-h-screen bg-[#0C0C0C] text-[#E8E8E8]">
-    <header class="w-full min-h-screen max-lg:bg-cover link bg-no-repeat bg-right-top bg-[url(Assets/Images/header/bg.png)] flex flex-col">
-        <nav class="container mx-auto flex max-lg:justify-center justify-between items-center py-4 lg:py-6 text-lg lg:gap-32 px-4">
+    <header class="w-full min-h-screen flex flex-col">
+        <nav class="container mx-auto flex justify-between items-center py-4 lg:py-6 text-lg lg:gap-32 px-4">
             <a href="" class="max-lg:z-10">
                 <img src="Assets/Images/header/logo.svg" alt="">
             </a>
-            <div class="flex lg:items-center lg:justify-between w-full max-lg:absolute max-lg:flex-col max-lg:gap-6 max-lg:left-0 max-lg:top-0 max-lg:p-6 max-lg:bg-[#0C0C0C] max-lg:h-fit max-lg:z-50 transition-all duration-500 max-lg:-translate-y-full" id="menu">
-                <div class="flex max-lg:w-full lg:items-center gap-6 max-lg:flex-col">
-                    <a href="">О нас</a>
-                    <a href="">Работы</a>
-                    <a href="">Контакты</a>
+            <div class="flex lg:items-center lg:justify-between w-full max-lg:absolute max-lg:flex-col max-lg:gap-6 max-lg:left-0 max-lg:top-0 max-lg:p-6 max-lg:bg-[#0C0C0C] max-lg:h-fit max-lg:z-50 transition-all duration-500 max-lg:-translate-y-full z-10" id="menu">
+                <div class="flex max-lg:w-full lg:items-center gap-6 lg:gap-12 max-lg:flex-col">
+                    <a href="" class="link">Работы</a>
+                    <a href="" class="link">Контакты</a>
                 </div>
                 <a href="tel:+79623442525" class="flex items-center gap-5 font-bold">
                     <img src="Assets/Images/icons/phone.svg" alt="" class="max-lg:invert">
                     <span class="lg:text-[#0C0C0C]">+7 (962) 344-25-25</span>
                 </a>
             </div>
-            <button class="lg:hidden absolute right-6 top-6 z-50 flex flex-col justify-between w-[26px] transition-all ease-linear h-3.5" id="toggler">
+            <button class="lg:hidden z-50 flex flex-col justify-between w-[26px] transition-all ease-linear h-3.5" id="toggler">
                 <span class="w-full h-0.5 bg-[#E8E8E8] rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
                 <span class="w-full h-0.5 bg-[#E8E8E8] rounded-[1px] transition-opacity ease-linear duration-200"></span>
                 <span class="w-full h-0.5 bg-[#E8E8E8] rounded-[1px] origin-[0] transition-transform ease-linear duration-200"></span>
             </button>
             <div class="absolute inset-0 bg-black opacity-60 z-40 top-0 h-screen hidden lg:hidden" id="overlay"></div>
         </nav>
-        <div class="flex flex-col gap-12 md:gap-16 lg:gap-[76px] lg:mt-28 container mx-auto uppercase px-4 max-lg:justify-center max-lg:grow">
+        <div class="flex flex-col gap-12 md:gap-16 lg:gap-[70px] lg:mt-28 container mx-auto uppercase px-4 max-lg:justify-center max-lg:grow">
             <div class="flex flex-col lg:text-lg lg:max-w-[50%] xl:max-w-[637px] gap-2 max-lg:z-10">
                 <p>В хорошей <span class="text-[#696969] font-bold">СЫРОВАРНЕ</span> варят вкуснейший сыр, который пробуждает глубокие гастрономические эмоции.</p>
                 <p>В хорошей <span class="text-[#696969] font-bold">ПИВОВАРНЕ</span> варят вкуснейшие напитки, утоляющие жажду и поднимающие настроение.</p>
             </div>
-            <p class="text-2xl md:text-3xl lg:text-4xl lg:max-w-[50%] xl:max-w-[651px] max-lg:z-10">В <span class="text-[#2F4F4F] font-bold">ШАРОВАРНЕ БРУСКО</span> мы с любовью варим для вас ландшафтные шары, которые станут ярким и центральным местом вашего сада. Они будут пробуждать бурю эмоций и впечатлений круглый год.</p>
+            <p class="text-2xl md:text-3xl xl:text-4xl lg:max-w-[50%] xl:max-w-[651px] max-lg:z-10">Мы с любовью варим для вас <span class="text-[#696969] font-bold">ландшафтные шары</span>, которые станут ярким и центральным местом вашего сада. Они будут пробуждать бурю эмоций и впечатлений круглый год.</p>
         </div>
-        <div class="absolute inset-0 bg-black opacity-70 h-full lg:hidden"></div>
+        <img src="Assets/Images/header/bg.png" alt="" class="w-full lg:w-1/2 absolute h-full top-0 right-0 object-cover -z-1">
+        <div class="absolute inset-0 bg-black opacity-70 h-full lg:hidden z-1"></div>
     </header>  
 
-    <footer>
+    <main class="flex flex-col gap-12 md:gap-20 lg:gap-[180px] mt-12 md:mt-10 lg:mt-[180px] overflow-clip">
+        <div class="container mx-auto flex flex-col gap-4 relative px-4">
+            <p class="font-bold text-3xl lg:text-4xl xl:text-[40px] text-[#B28F4F] uppercase tracking-[6px]">Внимание к каждой детали</p>
+            <p class="text-lg md:text-xl xl:text-2xl max-w-[1058px]">Уникальность наших скульптур в мощной положительной энергетике, вложенной мастером в процессе создания. В каждой работе сотни часов ручного труда. В процессе создания мы руководствовались простыми принципами: индивидуальность и гармоничность.</p>
+            <img src="Assets/Images/back/1.svg" alt="" class="absolute max-lg:hidden -right-14 top-14">
+        </div>
+        <div class="flex flex-col gap-7 w-full">
+            <div class="container mx-auto px-4">
+                <p class="font-bold text-3xl lg:text-4xl xl:text-[40px] text-[#B28F4F] uppercase tracking-[6px]">наши работы</p>
+            </div>
+            <div class="flex flex-col gap-12 md:gap-16 xl:gap-[90px]">
+                <div class="flex max-lg:flex-col gap-8 md:gap-12 xl:gap-20 items-center pr-4">
+                    <div class="border-y-[0.3px] border-r-[0.3px] border-[#E8E8E8] w-full lg:w-3/5 py-[30px] md:py-16 xl:py-[108px] max-lg:px-1.5 lg:px-4 xl:pl-[199px] xl:pr-10">
+                        <div class="flex items-center gap-2.5 md:gap-6 xl:gap-10">
+                            <button class="examples-1-prev">
+                                <img src="Assets/Images/icons/prev.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                            <div class="swiper examples-1 w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/1.png" alt="">
+                                    </div>
+                                </div>    
+                            </div>
+                            <button class="examples-1-next">
+                                <img src="Assets/Images/icons/next.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 max-lg:items-center max-lg:text-center max-lg:pl-4">
+                        <p class="font-bold text-2xl md:text-3xl xl:text-4xl text-[#B28F4F] uppercase">Назначение</p>
+                        <p class="max-w-[481px] text-lg lg:text-xl">
+                            Наши работы могут быть установлены
+                            как на открытых пространствах,
+                            так и в изысканных интерьерах.
+                            Они будут притягивать внимание
+                            даже самых искушенных зрителей
+                            своей оригинальностью.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex max-lg:flex-col gap-8 md:gap-12 xl:gap-20 items-center pl-4 lg:justify-end">
+                    <div class="border-y-[0.3px] border-l-[0.3px] border-[#E8E8E8] w-full lg:w-3/5 py-[30px] md:py-16 xl:py-[108px] max-lg:px-1.5 lg:px-4 xl:pl-[199px] xl:pr-10">
+                        <div class="flex items-center gap-2.5 md:gap-6 xl:gap-10">
+                            <button class="examples-2-prev">
+                                <img src="Assets/Images/icons/prev.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                            <div class="swiper examples-2 w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/2.png" alt="">
+                                    </div>
+                                </div>    
+                            </div>
+                            <button class="examples-2-next">
+                                <img src="Assets/Images/icons/next.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 max-lg:items-center max-lg:text-center max-lg:pr-4 lg:pl-4 lg:order-first lg:text-right lg:items-end relative">
+                        <p class="font-bold text-2xl md:text-3xl xl:text-4xl text-[#B28F4F] uppercase">Внешний вид</p>
+                        <p class="max-w-[523px] text-lg lg:text-xl">
+                            Подсветка шаров в темное время суток 
+                            раскрывает скульптуру в другом свете. 
+                            Играя своими гранями она превращается
+                            в неземной нерукотворный объект внимания
+                        </p>
+                        <img src="Assets/Images/back/2.svg" alt="" class="max-lg:hidden right-0 top-1/2 -translate-y-1/2 absolute -z-10">
+                    </div>
+                </div>
+                <div class="flex max-lg:flex-col gap-8 md:gap-12 xl:gap-20 items-center pr-4">
+                    <div class="border-y-[0.3px] border-r-[0.3px] border-[#E8E8E8] w-full lg:w-3/5 py-[30px] md:py-16 xl:py-[108px] max-lg:px-1.5 lg:px-4 xl:pl-[199px] xl:pr-10">
+                        <div class="flex items-center gap-2.5 md:gap-6 xl:gap-10">
+                            <button class="examples-3-prev">
+                                <img src="Assets/Images/icons/prev.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                            <div class="swiper examples-3 w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/3.png" alt="">
+                                    </div>
+                                </div>    
+                            </div>
+                            <button class="examples-3-next">
+                                <img src="Assets/Images/icons/next.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 max-lg:items-center max-lg:text-center max-lg:pl-4 relative">
+                        <p class="font-bold text-2xl md:text-3xl xl:text-4xl text-[#B28F4F] uppercase">Покрытие</p>
+                        <p class="max-w-[481px] text-lg lg:text-xl">
+                            Патина на скульптурах в виде ржавчины 
+                            подобно морозному узору на стекле  - 
+                            естественна и неповторима. 
+                            Вы удивитесь как патина меняет цвет 
+                            на рассвете и закате. 
+                            Она придает скульптуре естественную состаренность и ценность. 
+                            Создание такого покрытия 
+                            можно смело назвать художественной магией
+                        </p>
+                        <img src="Assets/Images/back/3.svg" alt="" class="max-lg:hidden left-0 top-1/2 -translate-y-1/2 absolute -z-10">
+                    </div>
+                </div>
+                <div class="flex max-lg:flex-col gap-8 md:gap-12 xl:gap-20 items-center pl-4 lg:justify-end">
+                    <div class="border-y-[0.3px] border-l-[0.3px] border-[#E8E8E8] w-full lg:w-3/5 py-[30px] md:py-16 xl:py-[108px] max-lg:px-1.5 lg:px-4 xl:pl-[199px] xl:pr-10">
+                        <div class="flex items-center gap-2.5 md:gap-6 xl:gap-10">
+                            <button class="examples-4-prev">
+                                <img src="Assets/Images/icons/prev.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                            <div class="swiper examples-4 w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/4.png" alt="">
+                                    </div>
+                                </div>    
+                            </div>
+                            <button class="examples-4-next">
+                                <img src="Assets/Images/icons/next.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 max-lg:items-center max-lg:text-center max-lg:pr-4 lg:pl-4 lg:order-first lg:text-right lg:items-end relative">
+                        <p class="font-bold text-2xl md:text-3xl xl:text-4xl text-[#B28F4F] uppercase">Размер имеет значение</p>
+                        <p class="max-w-[547px] text-lg lg:text-xl">
+                            Размеры шаров ограничены лишь 
+                            вашей фантазией и местом размещения. 
+                            Они могут быть как гигантских размеров, 
+                            подчеркивая свою мощь и силу, 
+                            так и совсем небольших, показывая свою 
+                            элегантность и утонченность
+                        </p>
+                        <img src="Assets/Images/back/4.svg" alt="" class="max-lg:hidden right-0 top-1/2 -translate-y-1/2 absolute -z-10">
+                    </div>
+                </div>
+                <div class="flex max-lg:flex-col gap-8 md:gap-12 xl:gap-20 items-center pr-4">
+                    <div class="border-y-[0.3px] border-r-[0.3px] border-[#E8E8E8] w-full lg:w-3/5 py-[30px] md:py-16 xl:py-[108px] max-lg:px-1.5 lg:px-4 xl:pl-[199px] xl:pr-10">
+                        <div class="flex items-center gap-2.5 md:gap-6 xl:gap-10">
+                            <button class="examples-5-prev">
+                                <img src="Assets/Images/icons/prev.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                            <div class="swiper examples-5 w-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/5.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/5.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="Assets/Images/examples/5.png" alt="">
+                                    </div>
+                                </div>    
+                            </div>
+                            <button class="examples-5-next">
+                                <img src="Assets/Images/icons/next.svg" alt="" class="w-4 md:w-6 xl:w-8">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 max-lg:items-center max-lg:text-center max-lg:pl-4 relative">
+                        <p class="font-bold text-2xl md:text-3xl xl:text-4xl text-[#B28F4F] uppercase">Композиция</p>
+                        <p class="max-w-[515px] text-lg lg:text-xl">
+                            Несмотря на то, что каждая скульптура индивидуальна, самодостаточна 
+                            и не боится одиночества, 
+                            она с большим удовольствием и легкостью компануется с себе подобными, 
+                            для создание шикарной композиции
+                        </p>
+                        <img src="Assets/Images/back/5.svg" alt="" class="max-lg:hidden left-0 top-1/2 -translate-y-1/2 absolute -z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full py-12 md:py-16 xl:py-[90px] border-y-[0.3px] border-[#E8E8E8]">
+            <div class="container mx-auto px-4 flex max-lg:flex-col lg:justify-between md:items-center gap-12 md:gap-20 xl:gap-[180px]">
+                <p class="text-2xl md:text-3xl xl:text-4xl max-w-[700px] md:text-center lg:text-left">
+                    Материалы и способы покрытия,
+                    размеры и варианты установки
+                    готовы обсудить с Вами индивидуально.
+                </p>
+                <div class="flex max-md:flex-col lg:flex-col gap-8 md:gap-12 xl:gap-6 uppercase">
+                    <div class="flex flex-col gap-7">
+                        <div class="flex items-center gap-4">
+                            <img src="Assets/Images/icons/phone_outline.svg" alt="">
+                            <p class="font-semibold text-xl md:text-2xl xl:text-2xl text-[#B28F4F]">Телефон</p>
+                        </div>
+                        <a class="font-light text-lg lg:text-xl" href="tel:+79623442525">+7 (962) 344-25-25</a>
+                    </div>
+                    <div class="flex flex-col gap-7">
+                        <div class="flex items-center gap-4">
+                            <img src="Assets/Images/icons/mail.svg" alt="">
+                            <p class="font-semibold text-xl md:text-2xl xl:text-2xl text-[#B28F4F]">Почта</p>
+                        </div>
+                        <a class="font-light text-lg lg:text-xl" href="mailto:bruskoshar@bk.ru">bruskoshar@bk.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <footer class="w-full py-6 md:py-8 xl:py-10 border-t-[0.3px] border-[#E8E8E8] text-white">
+        <div class="container mx-auto px-4 flex max-xl:flex-col gap-6 xl:gap-12 justify-between items-center">
+            <p class="max-md:text-center">© Шароварня Бруско - Изготовление ландшафтных скульптур, 2023</p>
+            <div class="flex items-center max-xl:flex-col gap-6 xl:gap-12">
+                <a href="/" target="_blank" class="underline">Политика конфиденциальности</a>
+                <a href="/" class="flex items-center gap-8 opacity-50">
+                    <span>Разработка сайтов</span>
+                    <span class="px-9 py-1 border border-white rounded-lg text-lg lg:text-xl">FILIPPOV</span>
+                </a>
+            </div>
+        </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
     crossorigin="anonymous"></script>
