@@ -10,6 +10,16 @@ $("#toggler, #overlay, .link").click(()=>{
   $("body").toggleClass("overflow-hidden")
 })
 
+/* scroll */
+$('a[href^="#"]').on('click', function() {
+  $("body").removeClass("overflow-hidden")
+  let href = $(this).attr('href')
+  $('html, body').animate({
+      scrollTop: $(href).offset().top
+  })
+  return false
+});
+
 /* sliders */
 const swiper = new Swiper('.examples-1', {
   loop: true,
@@ -44,5 +54,11 @@ const swiper5 = new Swiper('.examples-5', {
   navigation: {
     nextEl: '.examples-5-next',
     prevEl: '.examples-5-prev',
+  },
+});
+const swiper6 = new Swiper('.header-swiper', {
+  loop: true,
+  autoplay: {
+    delay: 3500,
   },
 });
