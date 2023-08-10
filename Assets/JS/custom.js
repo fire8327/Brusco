@@ -62,3 +62,19 @@ const swiper6 = new Swiper('.header-swiper', {
     delay: 7000
   }
 });
+
+/* gallery */
+$(".gallery").each((i, el) => {
+  $(el).click(()=> {
+    $(el).parent().addClass("lg:fixed lg:z-[100] lg:inset-0 lg:h-screen lg:w-full lg:px-4")
+    $("#gallery_overlay").removeClass("hidden")
+    $("body").addClass("overflow-hidden")
+    $("#gallery_close").removeClass("hidden")
+  })
+  $("#gallery_close").click(()=> {
+    $(el).parent().removeClass("lg:fixed lg:z-[100] lg:inset-0 lg:h-screen lg:w-full lg:px-4")
+    $("#gallery_overlay").addClass("hidden")
+    $("body").removeClass("overflow-hidden")
+    $("#gallery_close").addClass("hidden")
+  })
+});
