@@ -66,13 +66,13 @@ const swiper6 = new Swiper('.header-swiper', {
 /* gallery */
 $(".gallery").each((i, el) => {
   $(el).click(()=> {
-    $(el).parent().addClass("lg:fixed lg:z-[100] lg:inset-0 lg:h-screen lg:w-full lg:px-4")
+    $(el).parent().addClass("lg:fixed lg:z-[100] lg:inset-0 lg:w-[80%] lg:mx-auto lg:px-4")
     $("#gallery_overlay").removeClass("lg:hidden")
     $("body").addClass("lg:overflow-hidden")
     $("#gallery_close").removeClass("lg:hidden")
   })
   $("#gallery_close").click(()=> {
-    $(el).parent().removeClass("lg:fixed lg:z-[100] lg:inset-0 lg:h-screen lg:w-full lg:px-4")
+    $(el).parent().removeClass("lg:fixed lg:z-[100] lg:inset-0 lg:w-[80%] lg:mx-auto lg:px-4")
     $("#gallery_overlay").addClass("lg:hidden")
     $("body").removeClass("lg:overflow-hidden")
     $("#gallery_close").addClass("lg:hidden")
