@@ -58,5 +58,7 @@ const swiper5 = new Swiper('.examples-5', {
 });
 const swiper6 = new Swiper('.header-swiper', {
   loop: true,
-  autoplay: true
+  autoplay: {
+    delay: 7000
+  }
 });
